@@ -1,81 +1,32 @@
 # Temperature-converter
-#include <stdio.h>
 
-void celsiusToFahrenheit(float celsius) {
-    printf("%.2f Celsius = %.2f Fahrenheit\n", celsius, (celsius * 9/5) + 32);
-}
+The Temperature Converter program allows users to convert temperatures between different units, such as Celsius, Fahrenheit, and Kelvin. This project demonstrates basic input/output handling in C, as well as control flow using conditionals and loops.
 
-void fahrenheitToCelsius(float fahrenheit) {
-    printf("%.2f Fahrenheit = %.2f Celsius\n", fahrenheit, (fahrenheit - 32) * 5/9);
-}
-
-void celsiusToKelvin(float celsius) {
-    printf("%.2f Celsius = %.2f Kelvin\n", celsius, celsius + 273.15);
-}
-
-void kelvinToCelsius(float kelvin) {
-    printf("%.2f Kelvin = %.2f Celsius\n", kelvin, kelvin - 273.15);
-}
-
-void fahrenheitToKelvin(float fahrenheit) {
-    printf("%.2f Fahrenheit = %.2f Kelvin\n", fahrenheit, (fahrenheit - 32) * 5/9 + 273.15);
-}
-
-void kelvinToFahrenheit(float kelvin) {
-    printf("%.2f Kelvin = %.2f Fahrenheit\n", kelvin, (kelvin - 273.15) * 9/5 + 32);
-}
-
-int main() {
-    int choice;
-    float temp;
-
-    printf("Temperature Converter\n");
-    printf("1. Celsius to Fahrenheit\n");
-    printf("2. Fahrenheit to Celsius\n");
-    printf("3. Celsius to Kelvin\n");
-    printf("4. Kelvin to Celsius\n");
-    printf("5. Fahrenheit to Kelvin\n");
-    printf("6. Kelvin to Fahrenheit\n");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
-
-    switch(choice) {
-        case 1:
-            printf("Enter temperature in Celsius: ");
-            scanf("%f", &temp);
-            celsiusToFahrenheit(temp);
-            break;
-        case 2:
-            printf("Enter temperature in Fahrenheit: ");
-            scanf("%f", &temp);
-            fahrenheitToCelsius(temp);
-            break;
-        case 3:
-            printf("Enter temperature in Celsius: ");
-            scanf("%f", &temp);
-            celsiusToKelvin(temp);
-            break;
-        case 4:
-            printf("Enter temperature in Kelvin: ");
-            scanf("%f", &temp);
-            kelvinToCelsius(temp);
-            break;
-        case 5:
-            printf("Enter temperature in Fahrenheit: ");
-            scanf("%f", &temp);
-            fahrenheitToKelvin(temp);
-            break;
-        case 6:
-            printf("Enter temperature in Kelvin: ");
-            scanf("%f", &temp);
-            kelvinToFahrenheit(temp);
-            break;
-        default:
-            printf("Invalid choice! Please select a valid option.\n");
-    }
-
-    return 0;
-}
+Features:
+Unit Conversion:
+Convert from Celsius to Fahrenheit.
+Convert from Celsius to Kelvin.
+Convert from Fahrenheit to Celsius.
+Convert from Fahrenheit to Kelvin.
+Convert from Kelvin to Celsius.
+Convert from Kelvin to Fahrenheit.
+User Input:
+The user is prompted to enter a temperature value and choose the conversion type.
+Looping:
+The program runs in a loop, allowing the user to perform multiple conversions until they choose to exit.
+Error Handling:
+The program handles invalid inputs (e.g., non-numeric entries, invalid temperature values, or invalid conversion choices).
+Exit Option:
+The program includes an option for users to exit after completing their desired conversions.
+Project Breakdown:
+Input: The program will ask for the temperature value and the conversion type.
+Processing: Based on the user's input, it will apply the appropriate conversion formula.
+Formula Examples:
+Fahrenheit to Celsius: C = (F - 32) * 5/9
+Celsius to Fahrenheit: F = (C * 9/5) + 32
+Kelvin to Celsius: C = K - 273.15
+Celsius to Kelvin: K = C + 273.15
+Output: Display the converted temperature value.
 
 
 
